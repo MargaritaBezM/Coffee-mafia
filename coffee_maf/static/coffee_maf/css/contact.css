@@ -1,0 +1,46 @@
+main {
+    /* height: 100vh; */
+    background-color: #144058;
+    padding-top: 103px;
+}
+.map iframe {
+    position: relative;
+    /* width: 15px; */
+    margin: auto 15px;
+    max-width: 85%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    max-width: 1410px;
+    margin: auto;
+    gap: 26px;
+}
+.text-title {
+    font-family: 'Overpass Mono';
+    font-size: 48px;
+    font-weight: 300;
+    margin: 53px 0 20px;
+    color: #FFF;
+}
+.text-description {
+    font-family: 'Overpass Mono';
+    font-size: 24px;
+    font-weight: 200;
+    color: #FFF;
+    text-decoration: none;
+}
+.contact-container{
+    max-width: 1440px;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+@media (max-width:1000px) {
+    .contact-container{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}

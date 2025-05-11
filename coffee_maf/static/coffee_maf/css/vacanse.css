@@ -1,0 +1,154 @@
+main {
+    background-color: #144058;
+    padding-top: 103px;
+}
+.vacanse-container {
+    margin: auto;
+    max-width: 1410px;
+}
+.vacanse-card {
+    padding: 11px 7px 7px;
+    background-color: #FFF;
+    min-width: 225px;
+    min-height: 288px;
+    display: flex;
+    flex-direction: column;
+}
+.vacanse-cards {
+    display: flex;
+    gap: 121px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 150px;
+}
+.vacans-title {
+    font-family: 'Overpass Mono';
+    font-size: 48px;
+    font-weight: 300;
+    margin: 125px 0 50px;
+    color: #FFF;
+    text-align: center;
+}
+.vacans-title_mini{
+    font-family: 'Overpass Mono';
+    font-size: 36px;
+    font-weight: 300;
+    color: #FFF;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.vacanse-card_title {
+    font-family: 'Overpass Mono';
+    font-size: 20px;
+    font-weight: 200;
+    color: #000000;
+    text-transform: uppercase;
+}
+.vacanse-card_button {
+    padding: 17px 24px;
+    background-color: #144058;
+    color: #FFF;
+    font-size: 24px;
+    font-family: 'Overpass Mono';
+    margin-top: 7px;
+    text-decoration: none;
+}
+.vacanse-card_button:hover{
+  background-color: #31A5E5;
+}
+.form-container {
+    margin: auto;
+    margin-bottom: 50px;
+    background: #FFF;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    font-family: 'Overpass Mono';
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 30px;
+    font-family: 'Overpass Mono';
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 14px 10px 6px 0;
+    border: none;
+    border-bottom: 2px solid #999;
+    background: transparent;
+    font-size: 16px;
+    outline: none;
+    font-family: 'Overpass Mono';
+  }
+
+  .form-label {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    color: #999;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0 5px;
+  }
+
+  .form-input:focus + .form-label,
+  .form-input:not(:placeholder-shown) + .form-label {
+    top: -6px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  input[type="file"] {
+    margin-top: 10px;
+    font-family: 'Overpass Mono';
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #144058;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-family: 'Overpass Mono';
+  }
+
+  button:hover {
+    background: #31A5E5;
+  }
+
+  .checkbox-container {
+    margin-bottom: 40px;
+  }
+  .error-border {
+    border-bottom: 2px solid #ff4444 !important;
+    transition: border-bottom 0.3s ease;
+  }
+  
+  .error {
+    color: #ff4444;
+    font-size: 12px;
+    margin-top: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .error.show {
+    opacity: 1;
+  }
+
+@media (max-width: 600px) {
+  .form-container{
+    margin: 50px 15px;
+    width: auto;
+  }
+}

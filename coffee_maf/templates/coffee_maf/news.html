@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} News Coffee-mafia {% endblock %}
+
+{% block extra_css %}
+     <link rel="stylesheet" href="{% static 'coffee_maf/css/news.css' %}">
+{% endblock %}
+{% block content %}
+        <div class="news-fon" style="background-image: url('{% static 'coffee_maf/images/news_fon.png' %}')"></div>
+        <div class="news-container">  
+            <h3 class="news-title">Новости</h3>
+            <p class="news-desc">из мира кофе мафии</p>
+            <div class="news-cards">
+                 {% for item in news %}
+                    <div class="news-card" onclick="openModal('modal{{ forloop.counter }}')">
+                        <div>
+                            <img src="{{ item.image.url }}" alt="{{ item.title }}">
+                        </div>
+                        <p>{{ item.title }}</p>  <!-- Используем title вместо short_description -->
+                    </div>
+
+                    <div id="modal{{ forloop.counter }}" class="modal">
+                        <div class="modal-content">
+                            <h3>{{ item.title }}</h3>
+                            <p>{{ item.description|linebreaks }}</p>  <!-- Используем description -->
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <hr>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'coffee_maf/js/news.js' %}"></script>
+{% endblock %}

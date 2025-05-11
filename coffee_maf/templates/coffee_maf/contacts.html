@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Contacts Coffee-mafia {% endblock %}
+
+{% block extra_css %}
+     <link rel="stylesheet" href="{% static 'coffee_maf/css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+        <div class="contact-container">
+           <iframe src="https://yandex.ru/map-widget/v1/?ll=39.712129%2C47.224881&mode=search&oid=139155622669&ol=biz&z=16.54" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+            <div class="text">
+                <h3 class="text-title">КОНТАКТЫ</h3>
+                <p class="text-description">Пушкинская ул., 91А, Ростов-на-Дону</p>
+                <a  href="tel:+79287765369" class="text-description">+7(928)776-53-69</a>
+                <a href="mailto:CoffeeMaf@mail.ru" class="text-description">CoffeeMaf@mail.ru</a>
+                <div class="social-media">
+                    <a href="https://www.instagram.com/coffee.mafia_rnd/"><img src="{% static 'coffee_maf/images/media1.png' %}" alt=""></a>
+                    <a href="https://t.me/coffeemafiaaa"><img src="{% static 'coffee_maf/images/media2.png' %}" alt=""></a>
+                    <a href="https://api.whatsapp.com/send?phone=79287765369"><img src="{% static 'coffee_maf/images/media3.png' %}" alt=""></a>
+                </div>   
+            </div> 
+        </div>
+{% endblock %}
