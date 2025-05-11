@@ -24,6 +24,10 @@ main {
 .products-menu > li:hover{
     background-color: #31A5E5;
 }
+.type_product {
+    color: #FFF ;
+    text-decoration: none;
+}
 .products-cards{
     display: flex;
     flex-wrap: wrap;
@@ -38,6 +42,10 @@ main {
     font-family: 'Overpass Mono';
     font-size: 16px;
     line-height: 26px;
+    width: 210px;
+}
+.products-card img {
+    width: 211px;
 }
 .modal {
     display: none;
@@ -84,17 +92,30 @@ main {
 }
 @media (max-width:600px) {
     .modal-content{
-        margin: 40% auto;
+        margin: 25% auto;
+    }
+    .first-box-card {
+        flex-wrap: wrap;
     }
 }
 .first-box-card{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    gap: 25px;
 }
+
 .first-box-card h3{
     font-size: 32px;
-    text-align: right;
+    text-align: left;
     line-height: 45px;
+}
+.none-products_text {
+    color: #FFF;
+    font-family: 'Overpass Mono';
+    font-size: 16px;
+}
+.first-box-card img {
+    width: 211px;
 }
