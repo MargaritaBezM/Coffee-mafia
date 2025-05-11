@@ -1,5 +1,6 @@
 __pycache__/
 *.pyc
+*.ру
 *.pyo
 *.pyd
 .DS_Store  # для Mac
