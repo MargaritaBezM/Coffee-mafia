@@ -17,13 +17,13 @@
                         <div>
                             <img src="{{ item.image.url }}" alt="{{ item.title }}">
                         </div>
-                        <p>{{ item.title }}</p>  <!-- Используем title вместо short_description -->
+                        <p>{{ item.title }}</p>
                     </div>
 
                     <div id="modal{{ forloop.counter }}" class="modal">
                         <div class="modal-content">
                             <h3>{{ item.title }}</h3>
-                            <p>{{ item.description|linebreaks }}</p>  <!-- Используем description -->
+                            <p>{{ item.description|linebreaks }}</p>
                         </div>
                     </div>
                 {% endfor %}
