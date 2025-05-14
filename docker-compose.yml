@@ -1,4 +1,37 @@
 services:
+  coffee-mafia:
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    command: >
+      sh -c "python manage.py makemigrations &&
+             python manage.py migrate &&
+             python manage.py collectstatic --noinput &&
+             gunicorn coffee_mafia.wsgi:application --bind 0.0.0.0:8080"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=web"
+      - "traefik.http.routers.coffee-mafia.rule=Host(`coffee-mafia.localhost`)"
+      - "traefik.http.services.coffee-mafia.loadbalancer.server.port=8080"
+    environment:
+      SECRET_KEY: django-insecure-b(2dpat@qmoz7$#m(cp40&6@yihyf(s#f%8swzurra=(u+o7+m
+      DB_NAME: coffee_mafia
+      DB_USER: postgres
+      DB_PASSWORD: postgres
+      DB_HOST: postgresql
+      DB_PORT: 5432
+      EMAIL_HOST: smtp.mail.ru
+      EMAIL_PORT: 465
+      EMAIL_HOST_USER: m.rita1012@mail.ru
+      EMAIL_HOST_PASSWORD: NeWq7j963aDrjpM9zyxp
+      DEFAULT_FROM_EMAIL: m.rita1012@mail.ru
+      DEBUG: 1
+    volumes:
+      - media:/app/media/
+    networks:
+      - web
+
   postgresql:
     image: postgres:15.0
     restart: unless-stopped
@@ -44,6 +77,8 @@ services:
     depends_on:
       - traefik
       - postgresql
+volumes:
+  media:
 networks:
   web:
     external: true
