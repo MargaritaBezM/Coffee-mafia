@@ -153,8 +153,7 @@ table {
     .header_menu_list.active {
         left: 0;
     }
-    
-    /* Анимация бургера в крестик */
+
     .burger-btn.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 6px);
     }
@@ -164,8 +163,7 @@ table {
     .burger-btn.active span:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -6px);
     }
-    
-    /* Затемнение фона */
+
     .overlay {
         position: fixed;
         top: 0;
@@ -179,12 +177,10 @@ table {
         transition: 0.3s;
     }
 
-    /* Адаптация иконок */
     .icons {
-        margin-left: 15px; /* Отступ от бургера */
+        margin-left: 15px;
     }
-    
-    /* Сохраняем hover-эффекты для мобильного меню */
+
     .header_menu_link:hover::after {
         width: 100%;
     }
@@ -911,6 +907,9 @@ footer {
     }
 }
 @media (max-width: 1024px) {
+    .about {
+        height: 200vh;
+    }
     footer{
         margin: auto;
         text-align: center;
@@ -918,10 +917,15 @@ footer {
     }
     .container-footer {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         gap: 30px;
     }
-    
+    .social-media {
+        justify-content: center;
+    }
+    .big-logo {
+        margin-right: 0px;
+    }
     .big-logo img{
         margin-right: 0;
         margin-bottom: 30px;
@@ -929,9 +933,9 @@ footer {
     }
     
     .footer_menu_list {
-        flex-direction: column;
         gap: 15px;
         margin-bottom: 30px;
+        justify-content: center;
     }
     
     .contact {
@@ -1050,6 +1054,9 @@ footer {
     .catalog-text{
         font-size: 18px;
     }
+    .footer_menu_list {
+        flex-decoration: column;
+    }
     h3 {
         font-size: 36px !important;
     }
@@ -1060,7 +1067,5 @@ footer {
         top: 700px;
         left: 0px;
     }
-    .about {
-        height: 200vh;
-    }
+
 }
