@@ -31,7 +31,7 @@
                         <span class="close" onclick="closeModal('productModal{{ product.id }}')">&times;</span>
                         <div class="first-box-card">
                             <img src="{{ product.image.url }}" alt="{{ product.title }}"><br>
-                            <h3>{{ product.title }} <br> {{ product.price }} ₽</h3>
+                            <h3 class="product-title">{{ product.title }} <br> {{ product.price }} ₽</h3>
                         </div>
                         <p>{{ product.volume|linebreaks }}</p><br>
                         <p>{{ product.description|linebreaks }}</p>

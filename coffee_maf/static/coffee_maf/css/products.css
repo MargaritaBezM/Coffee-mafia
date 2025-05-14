@@ -52,23 +52,29 @@ main {
     position: fixed;
     z-index: 100;
     left: 0;
-    top: 0;
+    top: 103px;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    height: calc(100vh - 103px);
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
 }
 
 .modal-content {
     background-color: #fff;
-    margin: 8% auto ;
+    margin: auto ;
     padding: 20px;
     width: 80%;
     max-width: 800px;
+    max-height: 70vh;
+    overflow-y: auto;
     border-radius: 10px;
     position: relative;
     font-family: 'Overpass Mono';
     font-size: 16px;
     color: #144058;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 .close {
     position: absolute;
@@ -81,9 +87,6 @@ main {
     .products-container{
         max-width: 85%;
     }
-    .modal-content{
-        margin: 20% auto;
-    }
 }
 @media (max-width:1200px) {
     .products-cards{
@@ -91,11 +94,11 @@ main {
     }
 }
 @media (max-width:600px) {
-    .modal-content{
-        margin: 25% auto;
-    }
     .first-box-card {
         flex-wrap: wrap;
+    }
+    .product-title {
+    font-size: 24px !important;
     }
 }
 .first-box-card{
