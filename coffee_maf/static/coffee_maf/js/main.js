@@ -15,19 +15,3 @@ document.getElementById('popup').addEventListener('click', (e) => {
         document.getElementById('popup').style.display = 'none';
     }
 });
-
-const burgerBtn = document.getElementById('burger');
-const menu = document.querySelector('.header_menu_list');
-const overlay = document.getElementById('overlay');
-
-burgerBtn.addEventListener('click', () => {
-    burgerBtn.classList.toggle('active');
-    menu.classList.toggle('active');
-    overlay.classList.toggle('active');
-});
-
-overlay.addEventListener('click', () => {
-    burgerBtn.classList.remove('active');
-    menu.classList.remove('active');
-    overlay.classList.remove('active');
-});
