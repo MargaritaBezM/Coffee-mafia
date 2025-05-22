@@ -61,13 +61,8 @@ services:
     image: dpage/pgadmin4
     restart: unless-stopped
     environment:
-      PGADMIN_DEFAULT_EMAIL: admin@admin.com
-      PGADMIN_DEFAULT_PASSWORD: admin
-    labels:
-      - "traefik.enable=true"
-      - "traefik.docker.network=web"
-      - "traefik.http.routers.pgadmin.rule=Host(`pgadmin.localhost`)"
-      - "traefik.http.services.pgadmin.loadbalancer.server.port=80"
+      PGADMIN_DEFAULT_EMAIL: m.rita1012@mail.ru
+      PGADMIN_DEFAULT_PASSWORD: margo
     networks:
       - web
     depends_on:
