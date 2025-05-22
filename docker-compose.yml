@@ -2,8 +2,6 @@ services:
   coffee-mafia:
     build:
       context: .
-    ports:
-      - "8080:8080"
     command: >
       sh -c "python manage.py makemigrations &&
              python manage.py migrate &&
@@ -17,8 +15,8 @@ services:
     environment:
       SECRET_KEY: django-insecure-b(2dpat@qmoz7$#m(cp40&6@yihyf(s#f%8swzurra=(u+o7+m
       DB_NAME: coffee_mafia
-      DB_USER: postgres
-      DB_PASSWORD: postgres
+      DB_USER: margo
+      DB_PASSWORD: qazOP43ghJ
       DB_HOST: postgresql
       DB_PORT: 5432
       EMAIL_HOST: smtp.mail.ru
@@ -42,8 +40,6 @@ services:
       POSTGRES_MAX_CONNECTIONS: 500
     networks:
       - web
-    ports:
-      - "5432:5432"
 
   traefik:
     image: traefik:latest
