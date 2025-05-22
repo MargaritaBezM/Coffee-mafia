@@ -73,6 +73,8 @@ services:
     depends_on:
       - traefik
       - postgresql
+    ports:
+      - "9371:80"
 volumes:
   media:
 networks:
