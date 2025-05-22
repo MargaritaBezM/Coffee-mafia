@@ -10,7 +10,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
-      - "traefik.http.routers.coffee-mafia.rule=Host(`coffee-mafia.localhost`)"
+      - "traefik.http.routers.coffee-mafia.rule=Host(`coffee-mafia.ru`)"
       - "traefik.http.services.coffee-mafia.loadbalancer.server.port=8080"
     environment:
       SECRET_KEY: django-insecure-b(2dpat@qmoz7$#m(cp40&6@yihyf(s#f%8swzurra=(u+o7+m
