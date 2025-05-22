@@ -1,5 +1,9 @@
 from django.urls import path
 from . import views
+from django.conf.urls import handler404
+from coffee_maf.views import notFound_page
+
+handler404 = notFound_page
 
 urlpatterns = [
     path('', views.home_page, name='main'),

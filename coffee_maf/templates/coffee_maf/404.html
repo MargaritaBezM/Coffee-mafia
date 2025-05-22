@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Страница не найдена Coffee-mafia {% endblock %}
+
+{% block extra_css %}
+     <link rel="stylesheet" href="{% static 'coffee_maf/css/404.css' %}?v=1.1">
+{% endblock %}
+
+{% block content %}
+<div class="container_page">
+    <h2 class="title_page">404</h2>
+    <p class="description_page">
+        Страница не найдена
+    </p>
+    <a class="button_page" href="{% url 'main' %}">Вернуться на главную</a>
+</div>
+{% endblock %}

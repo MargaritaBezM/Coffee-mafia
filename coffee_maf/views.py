@@ -76,3 +76,6 @@ def politic_page(request):
 
 def personalDate_page(request):
     return render(request, 'coffee_maf/personalDate.html')
+
+def notFound_page(request, exception):
+    return render(request, 'coffee_maf/404.html', status=404)

@@ -7,9 +7,9 @@
 
 }
 html, body {
-    overflow-y: scroll; /* Фиксирует прыжки контента */
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 html::-webkit-scrollbar, 
@@ -120,7 +120,7 @@ table {
     cursor: pointer;
     padding: 10px;
     z-index: 1001;
-    margin-left: auto; /* Выравниваем кнопку по правому краю */
+    margin-left: auto;
 }
 
 .burger-btn span {
@@ -447,7 +447,7 @@ main {
 }
 .galery-text {
     text-align: right;
-    margin-left: auto; /* Прижимает блок к правому краю */
+    margin-left: auto;
     width: 785px;
 }
 .galery-title{
@@ -468,14 +468,14 @@ main {
     line-height: 20px;
 }
 
-/* Ограничиваем ширину текста, но не анимации */
+
 .galery {
     max-width: 1410px; 
-    margin: 0 auto; /* Центрируем блок */
+    margin: 0 auto;
     padding: 85px 0 0;
 }
 
-/* Блоки с анимацией на всю ширину */
+
 .galery_scroll-container, .galery_scroll-container_unline {
     position: relative;
     width: 100vw;
@@ -483,7 +483,7 @@ main {
     white-space: nowrap;
 }
 
-/* Бесконечная анимация – Дублируем картинки */
+
 .galery_scroll-images, .galery_scroll-images_unline {
     display: flex;
     gap: 20px;
@@ -502,13 +502,13 @@ main {
     object-fit: cover;
 }
 
-/* Анимация влево */
+
 @keyframes scroll-left {
     from { transform: translateX(0); }
-    to { transform: translateX(-50%); } /* Только половина, чтобы не было скачка */
+    to { transform: translateX(-50%); }
 }
 
-/* Анимация вправо */
+
 @keyframes scroll-right {
     from { transform: translateX(-50%); }
     to { transform: translateX(0); }
@@ -695,7 +695,7 @@ main {
     font-size: 48px;
     font-weight: 300;
     margin-bottom: 39px;
-    text-align: center; /* Центрируем заголовок */
+    text-align: center;
 }
 
 .conteudo {
@@ -705,7 +705,7 @@ main {
 
 .carrousel {
     display: flex;
-    gap: 79px; /* Оригинальный отступ между карточками */
+    gap: 79px;
     padding-bottom: 20px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -713,7 +713,7 @@ main {
     scrollbar-color: #31A5E5 transparent;
 }
 
-/* Стили скроллбара */
+
 .carrousel::-webkit-scrollbar {
     height: 5px;
 }
@@ -722,18 +722,17 @@ main {
     border-radius: 5px;
 }
 
-/* Оригинальные стили карточки для десктопов */
+
 .card {
     background: #FFFFFF;
-    width: 544px; /* Фиксированная ширина */
-    height: auto; /* Высота по содержимому */
+    width: 544px;
+    height: auto;
     padding: 29px;
     scroll-snap-align: start;
     box-sizing: border-box;
-    flex-shrink: 0; /* Важно: запрещаем сжатие */
+    flex-shrink: 0;
 }
 
-/* Остальные стили остаются как в вашем оригинале */
 .titles-info {
     display: flex;
     flex-direction: row;
@@ -818,12 +817,12 @@ main {
     }
     
     .carrousel {
-        gap: 20px; /* Уменьшаем отступ */
+        gap: 20px;
     }
     
     .card {
-        width: calc(100% - 30px); /* На мобильных - почти на всю ширину */
-        min-width: 0; /* Сбрасываем минимальную ширину */
+        width: calc(100% - 30px);
+        min-width: 0;
         padding: 20px;
     }
     
@@ -994,7 +993,7 @@ footer {
     }
     
     .social-media img {
-        width: 24px; /* Уменьшаем иконки соцсетей */
+        width: 24px;
         height: 24px;
     }
     .social-media {

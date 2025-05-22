@@ -1,4 +1,3 @@
-// Маска для телефона: +7 (XXX) XXX-XX-XX
 document.getElementById('id_phone').addEventListener('input', function(e) {
     let value = this.value.replace(/\D/g, '');
 
@@ -15,7 +14,6 @@ document.getElementById('id_phone').addEventListener('input', function(e) {
     validatePhone();
 });
 
-// Валидация полей
 document.getElementById('id_email').addEventListener('input', validateEmail);
 document.getElementById('id_phone').addEventListener('blur', validatePhone);
 
@@ -76,11 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const vacancyId = card.dataset.vacancyId;
             const vacancyTitle = card.querySelector('.vacanse-card_title').textContent;
 
-            // Заполняем скрытые поля
             document.querySelector('[name="vacancy"]').value = vacancyId;
             document.querySelector('[name="position_text"]').value = vacancyTitle;
 
-            // Заполняем видимое поле (если есть)
             const positionField = document.getElementById('position');
             if (positionField) {
                 positionField.value = vacancyTitle;

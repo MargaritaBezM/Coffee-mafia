@@ -1,0 +1,41 @@
+main {
+    height: 100vh;
+    background-color: #144058;
+    overflow: hidden;
+    padding: 103px;
+}
+.container_page {
+    display: flex;
+    height: 100%;
+    margin: auto;
+    max-width: 1440px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title_page {
+    color: #fff;
+    font-size: 189px;
+    font-family: 'Overpass Mono';
+}
+.description_page {
+    color: #FFF;
+    font-family: 'Overpass Mono';
+    font-size: 48px;
+    margin-top: 25px;
+}
+.button_page {
+    color: #31A5E5;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Overpass Mono';
+    text-transform: uppercase;
+    border: 1px solid #31A5E5;
+    padding: 18px 30px;
+    margin: 100px;
+}
+.button_page:hover{
+    background-color: #31A5E5;
+    color: #FFFFFF;
+}
