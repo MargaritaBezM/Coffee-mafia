@@ -72,6 +72,7 @@ services:
       - "9371:80"
 volumes:
   media:
+  postgres_data:
 networks:
   web:
     external: true
