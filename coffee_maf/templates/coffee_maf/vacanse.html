@@ -15,19 +15,19 @@
             <div class="vacanse-card" data-vacancy-id="{{ item.id }}">
                 <p class="vacanse-card_title">{{ item.title }}</p>
                 <img src="{{ item.image.url }}" alt="{{ item.title }}">
-                <a class="vacanse-card_button" href="#form">Откликнуться</a>
+                <a class="vacanse-card_button" href="#vacancyForm">Откликнуться</a>
             </div>
         {% endfor %}
     </div>
 
     <h4 class="vacans-title_mini" id="form">ПРИСОЕДИНЯЙСЯ К НАМ</h4>
 
-    <!-- Блок с выбранной вакансией -->
+
     <div class="selected-vacancy" id="selectedVacancyBlock" style="display: none;">
         <p>Выбранная должность: <span id="selectedVacancyName"></span></p>
     </div>
 
-    <form class="form-container" method="post" enctype="multipart/form-data">
+    <form id="vacancyForm" class="form-container" method="post" enctype="multipart/form-data">
         {% csrf_token %}
 
         <div class="form-group">
