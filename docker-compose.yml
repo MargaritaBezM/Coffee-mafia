@@ -10,7 +10,7 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
-      - "traefik.http.routers.coffee-mafia.rule=Host(`coffee-mafia.ru`)"
+      - "traefik.http.routers.coffee-mafia.rule=Host(`coffee-mafia.ru`)  && (!(PathPrefix(`/.well-known`)"
       - "traefik.http.services.coffee-mafia.loadbalancer.server.port=8080"
       - "traefik.http.middlewares.https-redirect.headers.customrequestheaders.X-Forwarded-Proto=https"
       - "traefik.http.routers.coffee-mafia.middlewares=https-redirect"
