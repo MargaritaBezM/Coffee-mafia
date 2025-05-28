@@ -22,7 +22,7 @@
 
                     <div id="modal{{ forloop.counter }}" class="modal">
                         <div class="modal-content">
-                             <span class="close-btn" onclick="closeModal('modal{{ forloop.counter }}')"></span>
+                             <span class="close-btn" onclick="closeModal('modal{{ forloop.counter }}')">&times;</span>
                             <h3>{{ item.title }}</h3>
                             <p>{{ item.description|linebreaks }}</p>
                         </div>
