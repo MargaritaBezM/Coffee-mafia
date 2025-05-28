@@ -12,6 +12,8 @@ services:
       - "traefik.docker.network=web"
       - "traefik.http.routers.coffee-mafia.rule=Host(`coffee-mafia.ru`)"
       - "traefik.http.services.coffee-mafia.loadbalancer.server.port=8080"
+      - "traefik.http.middlewares.https-redirect.headers.customrequestheaders.X-Forwarded-Proto=https"
+      - "traefik.http.routers.coffee-mafia.middlewares=https-redirect"
     environment:
       SECRET_KEY: django-insecure-b(2dpat@qmoz7$#m(cp40&6@yihyf(s#f%8swzurra=(u+o7+m
       DB_NAME: coffee_mafia
