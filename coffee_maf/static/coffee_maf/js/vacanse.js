@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     buttons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
+
             const card = this.closest('.vacanse-card');
             const vacancyId = card.dataset.vacancyId;
             const vacancyTitle = card.querySelector('.vacanse-card_title').textContent;
@@ -80,6 +81,19 @@ document.addEventListener('DOMContentLoaded', function() {
             const positionField = document.getElementById('position');
             if (positionField) {
                 positionField.value = vacancyTitle;
+            }
+
+            const form = document.getElementById('vacancyForm');
+            if (form) {
+                form.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+                form.style.boxShadow = '0 0 0 2px #31A5E5';
+                setTimeout(() => {
+                    form.style.boxShadow = 'none';
+                }, 2000);
             }
         });
     });
