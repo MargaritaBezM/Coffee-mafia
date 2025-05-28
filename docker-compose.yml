@@ -11,9 +11,14 @@ services:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
       - "traefik.http.routers.coffee-mafia.rule=Host(`coffee-mafia.ru`)"
+      - "traefik.http.routers.coffee-mafia.entrypoints=websecure"
+      - "traefik.http.routers.coffee-mafia.tls=true"
+      - "traefik.http.routers.coffee-mafia.tls.certresolver=myresolver"
       - "traefik.http.services.coffee-mafia.loadbalancer.server.port=8080"
-      - "traefik.http.middlewares.https-redirect.headers.customrequestheaders.X-Forwarded-Proto=https"
-      - "traefik.http.routers.coffee-mafia.middlewares=https-redirect"
+      - "traefik.http.routers.http-catch.rule=Host(`coffee-mafia.ru`)"
+      - "traefik.http.routers.http-catch.entrypoints=web"
+      - "traefik.http.routers.http-catch.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
     environment:
       SECRET_KEY: django-insecure-b(2dpat@qmoz7$#m(cp40&6@yihyf(s#f%8swzurra=(u+o7+m
       DB_NAME: coffee_mafia
@@ -52,15 +57,24 @@ services:
       - web
     ports:
       - "80:80"
+      - "443:443"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - ./traefik/letsencrypt:/letsencrypt
     labels:
       - "traefik.enable=true"
       - "traefik.docker.network=web"
       - "traefik.http.routers.traefik.service=traefik"
       - "traefik.http.routers.traefik.rule=Host(`traefik.localhost`)"
       - "traefik.http.services.traefik.loadbalancer.server.port=8080"
-    command: --api.insecure=true --providers.docker
+    command:
+      - --api.insecure=true
+      - --providers.docker
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --certificatesresolvers.myresolver.acme.tlschallenge=true
+      - --certificatesresolvers.myresolver.acme.email=m.rita1012@mail.ru
+      - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
   pgadmin:
     image: dpage/pgadmin4
     restart: unless-stopped
