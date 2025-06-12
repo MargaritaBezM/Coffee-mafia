@@ -42,8 +42,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for 
-	older browsers */ 
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
@@ -266,7 +265,7 @@ main {
 
 @keyframes fly {
     0% {
-        transform: translate(0%, 250%) rotate(0deg); /* Начальная позиция (вне блока) + поворот */
+        transform: translate(0%, 250%) rotate(0deg);
         opacity: 0;
     }
     10% {
@@ -276,7 +275,7 @@ main {
         opacity: 1;
     }
     100% {
-        transform: translate(1400px, 150%) rotate(0deg); /* Конечная позиция (вне блока) */
+        transform: translate(1400px, 150%) rotate(0deg);
         opacity: 0;
     }
 }
@@ -658,7 +657,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* border-radius: 0.5rem; */
   }
   
   .card-front {
