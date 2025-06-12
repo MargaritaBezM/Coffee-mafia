@@ -26,7 +26,7 @@ DEBUG = bool(int(os.getenv('DEBUG')))
 ALLOWED_HOSTS = ['coffee-mafia.ru']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://coffee-mafia.ru.ru',
+    'https://coffee-mafia.ru',
 ]
 # Application definition
 
