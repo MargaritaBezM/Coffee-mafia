@@ -926,7 +926,7 @@ footer {
     .big-logo img{
         margin-right: 0;
         margin-bottom: 30px;
-        width: 150px; /* Уменьшаем логотип */
+        width: 150px;
     }
     
     .footer_menu_list {

@@ -69,7 +69,7 @@ services:
       - "--providers.docker=true"
       - "--certificatesresolvers.myresolver.acme.httpchallenge=true"
       - "--certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web"
-      - "--certificatesresolvers.myresolver.acme.email=ТВОЙ_EMAIL@mail.ru"
+      - "--certificatesresolvers.myresolver.acme.email=m.rita4321996@mail.ru"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
   pgadmin:
     image: dpage/pgadmin4
